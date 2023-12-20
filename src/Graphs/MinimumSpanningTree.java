@@ -7,14 +7,22 @@ import java.util.PriorityQueue;
 
 public class MinimumSpanningTree {
 
+    /*Time complexity -> O(E LOG(E))*/
+
     static int spanningTree(int V, int E, int edges[][]){
         int ans = 0;
         List<List<Node>> adjList = buildAdjList(V, E, edges);
         int[] vis = new int[V];
         PriorityQueue<Node> minHeap = new PriorityQueue<>(Comparator.comparingInt(Node::getWeight));
         minHeap.add(new Node(0, 0));
+
+        /* Every edge will get popped out of the heap once */
         while (!minHeap.isEmpty()) {
+
+            /* Max size of heap can be Log(E), hence popping operation won't take more than LOG(E) time */
             Node popped = minHeap.poll();
+
+            /* This If BLOCK will run for each vertex once, wherein each vertex's neighbours will be checked, and hence this will run for 2*E times */
             if (vis[popped.getVertex()]!=1) {
                 ans+=popped.getWeight();
                 vis[popped.getVertex()]=1;

@@ -5,7 +5,6 @@ import java.util.List;
 public class GFG_MinimumNoOfCoins {
 
     public static void main(String[] args) {
-
     }
 
      static List<Integer> minPartition(int N)

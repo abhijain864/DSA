@@ -1,13 +1,10 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class Trying {
 
     public static void main(String[] args) {
-        Integer a = 13;
-        traverse(a);
-        System.out.println(a);
+        int[] l = new int[] {3,9,13,45,67,89};
+        System.out.println(Arrays.binarySearch(l, 10));
     }
 
     public static void traverse(Integer b) {
