@@ -1,5 +1,3 @@
-import com.sun.deploy.util.StringUtils;
-
 public class GFG_FormAPalindrome {
 
     public static void main(String[] args) {
