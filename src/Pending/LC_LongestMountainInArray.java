@@ -15,5 +15,6 @@ public class LC_LongestMountainInArray {
 
     public static void main(String[] args) {
         System.out.println(new LC_LongestMountainInArray().longestMountain(new int[]{2,2,2}));
+        System.out.println("sdjnfjnjfn");
     }
 }
